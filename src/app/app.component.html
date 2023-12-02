@@ -12,109 +12,207 @@
         <h1 class="display-5 fw-bold">Queries</h1>
         
         <table>
-          <tr>
-            <th>Descripcion</th>
-            <th>Operadores</th>
-            <th>Acción</th>
-          </tr>
-          <tr>
-            <td>Traer tickets</td>
-            <td></td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Traer usuarios</td>
-            <td></td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets resueltos</td>
-            <td>$eq</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets no resueltos</td>
-            <td>$neq</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Usuarios con plan mayor a $900</td>
-            <td>$gt</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Usuarios con plan menor a $550</td>
-            <td>$lt</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Usuarios con plan menor ó igual a $550</td>
-            <td>$lte</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets con fecha mayor ó igual a 2017-12-12</td>
-            <td>$gte</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets de tipo "Alta" ó "Cambio de plan"</td>
-            <td>$in</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Usuarios localidad no sea Avellaneda ó Quilmes</td>
-            <td>$nin</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets con tipo "Desperfecto" ó "Cambiar plan"</td>
-            <td>$or</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets con tipo "Desperfecto" y de localidad Avellaneda</td>
-            <td>$and</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets no de Avellaneda y no resueltos</td>
-            <td>$nor</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Tickets que no tienen "Baja" en operaciones</td>
-            <td>$not</td>
-            <td>
-              <button type="button" class="btn btn-success">Traer</button>
-            </td>
-          </tr>
+            <tr>
+              <th>Descripcion</th>
+              <th>Operadores</th>
+              <th>Acción</th>
+            </tr>
+            <tr>
+              <td>Traer tickets</td>
+              <td></td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(1)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Traer usuarios</td>
+              <td></td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(2)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets resueltos</td>
+              <td>$eq</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(3)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets no resueltos</td>
+              <td>$neq</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(4)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con plan mayor a $900</td>
+              <td>$gt</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(5)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con plan menor a $550</td>
+              <td>$lt</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(6)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con plan menor ó igual a $550</td>
+              <td>$lte</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(7)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets con fecha mayor ó igual a 2017-12-12</td>
+              <td>$gte</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(8)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets de tipo "Alta" ó "Cambio de plan"</td>
+              <td>$in</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(9)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios localidad no sea Avellaneda ó Quilmes</td>
+              <td>$nin</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(10)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets con tipo "Desperfecto" ó "Cambiar plan"</td>
+              <td>$or</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(11)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets con tipo "Desperfecto" y de localidad Avellaneda</td>
+              <td>$and</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(12)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets no de Avellaneda y no resueltos</td>
+              <td>$nor</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(13)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets que no tienen "Baja" en operaciones</td>
+              <td>$not</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(14)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con nombre "Juan"</td>
+              <td>$text, $search</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(15)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios cercanos a UTN-FRA</td>
+              <td>$near</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(16)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios de Avellaneda (coordenadas) y aledaños</td>
+              <td>$geoWithin</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(17)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios frente Plaza Alsina</td>
+              <td>$geoIntersects</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(18)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets que tiene descripcion de desperfecto</td>
+              <td>$exists</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(19)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con código postal de tipo string</td>
+              <td>$type</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(20)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con canales "ESPN" y "ESPN 2" en su plan</td>
+              <td>$all</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(21)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Tickets con responsable de departamento "Service"</td>
+              <td>$elemMatch</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(22)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con 6 canales en su plan</td>
+              <td>$size</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(23)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Canales del plan "Deportes"</td>
+              <td>$sortByCount, $unwind, $match</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(24)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Desperfectos por tipo, localidad y cantidad de ocurrencias</td>
+              <td>$project, $unwind, $match, $group</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(25)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Clientes que son empleados</td>
+              <td>$lookup, $unwind, $match, $project</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(26)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Usuarios con más de dos tickets</td>
+              <td>$expr, $gt</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(27)">Traer</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Cantidad de ocurrencias de cada empleado que atendio tickets</td>
+              <td>$unwind, $group, $project</td>
+              <td>
+                <button type="button" class="btn btn-success" (click)="getData(28)">Traer</button>
+              </td>
+            </tr>
         </table>
         
 
@@ -122,18 +220,25 @@
     </div>
 
     <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2>Change the background</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
+      <div class="col-md-5">
+        <div class="h-100 p-3 text-bg-dark rounded-3">
+          <h2>Query</h2>
+          <pre>
+            <code>
+              {{this.query}}
+            </code>
+          </pre>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-          <h2>Add borders</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
+
+      <div class="col-md-7">
+        <div class="h-100 p-3 bg-body-tertiary border rounded-3">
+          <h2>Response</h2>
+          <pre>
+            <code>
+              {{this.result}}
+            </code>
+          </pre>
         </div>
       </div>
     </div>
