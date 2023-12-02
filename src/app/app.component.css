@@ -1,0 +1,15 @@
+table {
+    overflow-y: scroll;
+    height: 300px;
+    display: block;
+    table-layout: fixed;
+    border: 2.5px solid green;
+}
+
+th, td {
+    padding: 12px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
